@@ -13,6 +13,7 @@ import random
 
 markup = ReplyKeyboardMarkup()
 markup.add('/start')
+# photo = open(r'/home/artem/Desktop/Images/05304c9e8d8b327db682d23cde2244b3.jpg', 'rb')
 
 API_TOKEN = '6151736053:AAEW2UGGVd4MNJ4msO1dnJYALt6GOmFKiwo'
 
@@ -41,6 +42,7 @@ messagemarkup.add(button_1, button_2, button_3, button_4)
 
 @dp.message_handler(commands=['start', 'help'])
 async def send_welcome(message: types.Message):
+    # await message.reply(photo)
     await message.reply("Hi!\nI'm Exercisebot!\n")
     await message.reply("Select a category", reply_markup = messagemarkup)
  
